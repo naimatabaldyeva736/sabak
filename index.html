@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Paint — Информатика ачык сабагы</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-palette"></i> <span>PAINT</span> — ГРАФИКАЛЫК РЕДАКТОР
+            </a>
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Башкы бет</a></li>
+                    <li><a href="#sabak" class="nav-link">Сабак</a></li>
+                    <li><a href="#instrumentter" class="nav-link">Инструменттер</a></li>
+                    <li><a href="#demo" class="nav-link">Тажрыйба</a></li>
+                    <li><a href="#kadamdar" class="nav-link">Кадамдар</a></li>
+                    <li><a href="#oyun" class="nav-link">Оюн</a></li>
+                    <li><a href="#test" class="nav-link">Тест</a></li>
+                    <li><a href="#galereya" class="nav-link">Галерея</a></li>
+                    <li><a href="#tapshirmalar" class="nav-link">Тапшырмалар</a></li>
+                    <li><a href="#muugalim" class="nav-link">Мугалимге</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Информатика ачык сабагы</span>
+                <h1>Paint менен чыгармачылык дүйнөсүнө саякат!</h1>
+                <p>Бүгүн биз Microsoft Paint программасынын негизги мүмкүнчүлүктөрү менен таанышып, сүрөт тартып, инструменттерди колдонуп, оюн жана тест аркылуу билимибизди текшеребиз.</p>
+                <div class="hero-btns">
+                    <a href="#sabak" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Сабакты баштоо</a>
+                    <a href="#oyun" class="btn btn-secondary"><i class="fa-solid fa-gamepad"></i> Оюнду баштоо</a>
+                </div>
+                <div class="progress-box">
+                    <span>Сиздин жалпы прогрессиңиз: <strong id="progressText">0%</strong></span>
+                    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%;"></div></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="glass-card-mockup">
+                    <i class="fa-solid fa-laptop-code floating-icon"></i>
+                    <div class="mockup-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="title-mockup">Untitled - Paint</span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mini-tools">
+                            <i class="fa-solid fa-pencil"></i>
+                            <i class="fa-solid fa-paintbrush"></i>
+                            <i class="fa-solid fa-fill-drip"></i>
+                            <i class="fa-solid fa-font"></i>
+                            <i class="fa-solid fa-shapes"></i>
+                            <i class="fa-solid fa-eraser"></i>
+                        </div>
+                        <div class="mini-canvas">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- САБАКТЫН МАКСАТЫ -->
+    <section id="sabak" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🎯 Сабактын максаты</h2>
+                <p>Бул сабактын соңунда эмнелерди үйрөнөсүз?</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                    <h3>Paint ачуу</h3>
+                    <p>Paint программасын компьютерден тез таап, интерфейси менен таанышуу.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-paintbrush"></i></div>
+                    <h3>Инструменттер</h3>
+                    <p>Карандаш, кисть, өчүргүч жана башка негизги куралдарды колдонуу.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Түстөр палитрасы</h3>
+                    <p>Түстөрдү туура тандоо, алмаштыруу жана заливка жасоо көндүмдөрү.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-image"></i></div>
+                    <h3>Сүрөт тартуу</h3>
+                    <p>Ар кандай геометриялык фигуралар жана сызыктар аркылуу сюжет түзүү.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-floppy-disk"></i></div>
+                    <h3>Сактоо</h3>
+                    <p>Даяр болгон сүрөттөрдү компьютерге туура форматта сактоону өздөштүрүү.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Практика</h3>
+                    <p>Алган билимдерди кызыктуу тапшырмалар жана оюндар аркылуу бекемдөө.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAINT ТУУРАЛУУ -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>💻 Paint деген эмне?</h2>
+                <p>Microsoft Paint — графикалык редактор</p>
+            </div>
+            <div class="paint-info-grid">
+                <div class="paint-text">
+                    <p class="lead"><strong>Microsoft Paint</strong> — компьютерде жөнөкөй сүрөттөрдү түзүүгө, боёого, өзгөртүүгө жана сактоого арналган графикалык редактор.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Тез иштеген жана колдонууга оңой интерфейс</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Баштапкы деңгээлдеги сүрөтчүлөр үчүн эң сонун чечим</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Файлдарды JPEG, PNG, BMP форматтарында сактоо мүмкүнчүлүгү</li>
+                    </ul>
+                </div>
+                <div class="paint-interface-mockup">
+                    <div class="interface-box" id="lightboxTrigger">
+                        <div class="inf-top"><span>Фактический интерфейс Paint программасы</span></div>
+                        <div class="inf-ribbon">
+                            <span class="active-tab">Главная</span><span>Вид</span>
+                        </div>
+                        <div class="inf-tools-row">
+                            <span>📋 Вставить</span><span>✂️ Выделить</span><span>✏️ Карандаш</span><span>🖌 Кисть</span><span>🔤 Текст</span><span>🪣 Заливка</span>
+                        </div>
+                        <div class="inf-canvas-area">
+                            <p><i class="fa-solid fa-magnifying-glass-plus"></i> Басып чоңойтуп көрүү (Lightbox)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНСТРУМЕНТТЕР -->
+    <section id="instrumentter" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🛠️ Paint инструменттери менен таанышабыз</h2>
+                <p>Ар бир куралдын өзүнүн милдети бар. Көбүрөөк билүү үчүн баскычты басыңыз:</p>
+            </div>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- JavaScript аркылуу толукталат -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНТЕРАКТИВДҮҮ CANVAS (ТАЖРЫЙБА) -->
+    <section id="demo" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>🎨 Интерактивдүү «Кантип иштейт?» бөлмөсү</h2>
+                <p>Төмөнкү аймакта инструменттерди сынап көрүңүз!</p>
+            </div>
+            <div class="canvas-lab-wrapper">
+                <div class="lab-controls">
+                    <div class="control-group">
+                        <label>Инструмент:</label>
+                        <button class="tool-btn active" data-tool="pencil"><i class="fa-solid fa-pencil"></i> Карандаш</button>
+                        <button class="tool-btn" data-tool="brush"><i class="fa-solid fa-paintbrush"></i> Кисть</button>
+                        <button class="tool-btn" data-tool="eraser"><i class="fa-solid fa-eraser"></i> Өчүргүч</button>
+                        <button class="tool-btn" data-tool="line"><i class="fa-solid fa-slash"></i> Сызык</button>
+                        <button class="tool-btn" data-tool="rect"><i class="fa-regular fa-square"></i> Тик бурчтук</button>
+                        <button class="tool-btn" data-tool="circle"><i class="fa-regular fa-circle"></i> Тегерек</button>
+                    </div>
+                    <div class="control-group">
+                        <label>Түс:</label>
+                        <input type="color" id="colorPicker" value="#0056b3">
+                        <label>Өлчөм:</label>
+                        <input type="range" id="brushSize" min="1" max="30" value="5">
+                    </div>
+                    <div class="control-group">
+                        <button id="clearCanvas" class="btn-sm btn-danger"><i class="fa-solid fa-trash"></i> Тазалоо</button>
+                        <button id="saveCanvas" class="btn-sm btn-success"><i class="fa-solid fa-download"></i> Сактоо (PNG)</button>
+                    </div>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="paintCanvas" width="800" height="450"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАДАМДАР -->
+    <section id="kadamdar" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>👣 Кадам-кадам менен үйрөнөбүз</h2>
+                <p>Paint программасында иштей баштагандагы негизги кадамдар</p>
+            </div>
+            <div class="step-slider">
+                <div class="step-card active-step" data-step="1">
+                    <span class="step-number">01</span>
+                    <h3>Paint программасын ач</h3>
+                    <p>Пуск (Start) менюсуна кирип, издөө тилкесине "Paint" деп жазып программаны ачыңыз.</p>
+                </div>
+                <div class="step-card" data-step="2">
+                    <span class="step-number">02</span>
+                    <h3>Инструментти танда</h3>
+                    <p>Жогорку панелден карандаш, кисть же башка керектүү куралды чыкылдатып тандаңыз.</p>
+                </div>
+                <div class="step-card" data-step="3">
+                    <span class="step-number">03</span>
+                    <h3>Түстү танда</h3>
+                    <p>Палитрадан өзүңүзгө жаккан түстү тандап алыңыз. Кошумча түстөрдү да түзө аласыз.</p>
+                </div>
+                <div class="step-card" data-step="4">
+                    <span class="step-number">04</span>
+                    <h3>Сүрөт тарт</h3>
+                    <p>Чычкандын сол баскычын басып кармап туруп, ак аймакка сүрөт тартыңыз.</p>
+                </div>
+                <div class="step-card" data-step="5">
+                    <span class="step-number">05</span>
+                    <h3>Сүрөттү өзгөрт</h3>
+                    <p>Кааласаңыз өчүргүч же заливка куралдарын колдонуп сүрөтүңүздү толуктаңыз.</p>
+                </div>
+                <div class="step-card" data-step="6">
+                    <span class="step-number">06</span>
+                    <h3>Сүрөттү сакта</h3>
+                    <p>Файл -> Сохранить как менюсу аркылуу өзүңүздүн эмгегиңизди компьютерге сактаңыз.</p>
+                </div>
+            </div>
+            <div class="step-navigation">
+                <button id="prevStep" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Мурунку кадам</button>
+                <button id="nextStep" class="btn btn-primary">Кийинки кадам <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОЮН БӨЛҮМҮ -->
+    <section id="oyun" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>🎮 «Paint Master» мини-оюну</h2>
+                <p>Билимиңизди сынап, упай топтоңуз!</p>
+            </div>
+            <div class="game-container" id="gameContainer">
+                <div class="game-start-screen" id="gameStartScreen">
+                    <h3>Оюнга даярсызбы?</h3>
+                    <p>Сизге Paint программасы боюнча 10 кызыктуу суроо берилет. Туура жооп берип Paint Master наамын ут!</p>
+                    <button id="startGameBtn" class="btn btn-primary"><i class="fa-solid fa-play"></i> Оюнду баштоо</button>
+                </div>
+                <div class="game-play-screen hidden" id="gamePlayScreen">
+                    <div class="game-stats">
+                        <span>Суроо: <strong id="gameQuestionNum">1</strong>/10</span>
+                        <span>Упай: <strong id="gameScore">0</strong></span>
+                    </div>
+                    <div class="question-box" id="gameQuestionText">Суроо тексти бул жерде болот...</div>
+                    <div class="options-grid" id="gameOptionsGrid">
+                        <!-- Жооптор -->
+                    </div>
+                    <div id="gameFeedback" class="game-feedback"></div>
+                </div>
+                <div class="game-end-screen hidden" id="gameEndScreen">
+                    <h3>🎉 Оюн аяктады!</h3>
+                    <p>Сиздин жыйынтык упайыңыз: <strong id="finalGameScore">0</strong> / 100</p>
+                    <p>Сиздин деңгээлиңиз: <span id="gameRankLevel" class="rank-badge">Башталгыч</span></p>
+                    <button id="restartGameBtn" class="btn btn-primary"><i class="fa-solid fa-rotate-right"></i> Кайра ойноо</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ТЕСТ БӨЛҮМҮ -->
+    <section id="test" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🧠 Билимиңди текшер (Тест)</h2>
+                <p>Сабактын материалдарын канчалык өздөштүргөнүңүздү текшериңиз</p>
+            </div>
+            <div class="quiz-container" id="quizContainer">
+                <div class="quiz-start-screen" id="quizStartScreen">
+                    <h3>Тестирлөө баскычы</h3>
+                    <p>Тест 10 суроодон турат. Ар бир суроонун бир гана туура жообу бар.</p>
+                    <button id="startQuizBtn" class="btn btn-primary"><i class="fa-solid fa-clipboard-check"></i> Тестти баштоо</button>
+                </div>
+                <div class="quiz-play-screen hidden" id="quizPlayScreen">
+                    <div class="quiz-progress-bar">
+                        <div id="quizProgressBarFill" style="width: 10%;"></div>
+                    </div>
+                    <div class="quiz-q-num" id="quizQNum">Суроо 1 / 10</div>
+                    <div class="quiz-question" id="quizQuestionText">Тесттин суроосу...</div>
+                    <div class="quiz-options" id="quizOptions"></div>
+                </div>
+                <div class="quiz-result-screen hidden" id="quizResultScreen">
+                    <h3>📊 Тесттин жыйынтыгы</h3>
+                    <div class="result-card-big">
+                        <span id="quizScoreText">10/10</span>
+                        <p id="quizPercentText">100%</p>
+                    </div>
+                    <p id="quizMessage" class="quiz-msg">Мыкты! Сен Paint программасын жакшы өздөштүрдүң!</p>
+                    <button id="restartQuizBtn" class="btn btn-primary"><i class="fa-solid fa-rotate-right"></i> Тестти кайра тапшыруу</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section id="galereya" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>🖼️ Paint менен жасалган иштер (Галерея)</h2>
+                <p>Окуучулардын Paint программасында тарткан эң мыкты эмгектери</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-title="Үй сүрөтү">
+                    <div class="gallery-img-box"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h4>Үй</h4>
+                </div>
+                <div class="gallery-item" data-title="Жайкы дарак">
+                    <div class="gallery-img-box"><i class="fa-solid fa-tree"></i></div>
+                    <h4>Дарак</h4>
+                </div>
+                <div class="gallery-item" data-title="Кооз гүл">
+                    <div class="gallery-img-box"><i class="fa-solid fa-seedling"></i></div>
+                    <h4>Гүл</h4>
+                </div>
+                <div class="gallery-item" data-title="Жаркыраган күн">
+                    <div class="gallery-img-box"><i class="fa-solid fa-sun"></i></div>
+                    <h4>Күн</h4>
+                </div>
+                <div class="gallery-item" data-title="Табият пейзажы">
+                    <div class="gallery-img-box"><i class="fa-solid fa-mountain-sun"></i></div>
+                    <h4>Пейзаж</h4>
+                </div>
+                <div class="gallery-item" data-title="Робот дос">
+                    <div class="gallery-img-box"><i class="fa-solid fa-robot"></i></div>
+                    <h4>Робот</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ТАПШЫРМАЛАР -->
+    <section id="tapshirmalar" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>📝 Практикалык тапшырмалар</h2>
+                <p>Бул тапшырмаларды компьютерге отуруп өз алдынча аткарып көрүңүз</p>
+            </div>
+            <div class="tasks-grid">
+                <div class="task-card">
+                    <span class="task-level green">🟢 Жеңил</span>
+                    <h3>1. Үйдүн сүрөтү</h3>
+                    <p>Тик бурчтук жана үч бурчтук фигураларын колдонуп жөнөкөй үйдүн сүрөтүн тарт.</p>
+                    <span class="task-reward"><i class="fa-solid fa-star"></i> 10 упай</span>
+                    <button class="btn btn-sm btn-outline complete-task-btn" data-task="1">Аткарылды деп белгилөө</button>
+                </div>
+                <div class="task-card">
+                    <span class="task-level green">🟢 Жеңил</span>
+                    <h3>2. Күн жана булут</h3>
+                    <p>Эллипс куралы аркылуу жылмайган күн жана жумшак булуттарды тарт.</p>
+                    <span class="task-reward"><i class="fa-solid fa-star"></i> 10 упай</span>
+                    <button class="btn btn-sm btn-outline complete-task-btn" data-task="2">Аткарылды деп белгилөө</button>
+                </div>
+                <div class="task-card">
+                    <span class="task-level yellow">🟡 Орточо</span>
+                    <h3>3. Пейзаж түзүү</h3>
+                    <p>Тоо, дарак, күн жана дарыя сызып, аларды түстүү заливка менен боё.</p>
+                    <span class="task-reward"><i class="fa-solid fa-star"></i> 20 упай</span>
+                    <button class="btn btn-sm btn-outline complete-task-btn" data-task="3">Аткарылды деп белгилөө</button>
+                </div>
+                <div class="task-card">
+                    <span class="task-level yellow">🟡 Орточо</span>
+                    <h3>4. Өз атыңды жазуу</h3>
+                    <p>Текст инструментин колдонуп өз атыңды ар кандай түстө жана өлчөмдө жаз.</p>
+                    <span class="task-reward"><i class="fa-solid fa-star"></i> 20 упай</span>
+                    <button class="btn btn-sm btn-outline complete-task-btn" data-task="4">Аткарылды деп белгилөө</button>
+                </div>
+                <div class="task-card">
+                    <span class="task-level red">🔴 Татаал</span>
+                    <h3>5. Робот тартуу</h3>
+                    <p>Ар кандай геометриялык фигураларды айкалыштырып татаал роботтун сүрөтүн түз.</p>
+                    <span class="task-reward"><i class="fa-solid fa-star"></i> 30 упай</span>
+                    <button class="btn btn-sm btn-outline complete-task-btn" data-task="5">Аткарылды деп белгилөө</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- МУГАЛИМ ҮЧҮН БӨЛҮМ -->
+    <section id="muugalim" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>👩‍🏫 Мугалим үчүн методикалык кеңештер</h2>
+                <p>Ачык сабакты өткөрүү боюнча кыскача көрсөтмө</p>
+            </div>
+            <div class="teacher-box">
+                <div class="teacher-grid">
+                    <div class="t-col">
+                        <h4>📌 Сабактын темасы:</h4>
+                        <p>Microsoft Paint графикалык редактору менен таанышуу</p>
+                        <h4>⏱ Болжолдуу убакыт:</h4>
+                        <p>45 мүнөт (1 сабак)</p>
+                        <h4>🎯 Негизги максат:</h4>
+                        <p>Окуучуларга растрдык графиканын негиздерин түшүндүрүү жана Paint куралдары менен иштей билүүгө үйрөтүү.</p>
+                    </div>
+                    <div class="t-col">
+                        <h4>📝 Сабактын этаптары:</h4>
+                        <ul>
+                            <li><strong>Уюштуруу бөлүгү</strong> (3 мин) — Саламдашуу, максат коюу.</li>
+                            <li><strong>Жаңы теманы түшүндүрүү</strong> (10 мин) — Сайттагы маалыматтарды жана интерактивдүү инструменттерди көрсөтүү.</li>
+                            <li><strong>Практикалык иш</strong> (15 мин) — Окуучулардын компьютерде же планшетте сүрөт тартуусу.</li>
+                            <li><strong>Оюн жана Тест</strong> (12 мин) — Билимди бекемдөө үчүн мини-оюнду жана тестти биргелешип иштөө.</li>
+                            <li><strong>Жыйынтыктоо</strong> (5 мин) — Баалоо жана үйдө аткаруу тапшырмаларын берүү.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="f-brand">
+                <i class="fa-solid fa-palette"></i> <span>Paint боюнча ачык сабак</span>
+            </div>
+            <p>Информатика сабагы • «Оку — үйрөн — сына — жарат!»</p>
+            <p class="copy">© 2026 Бардык укуктар корголгон.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL WINDOW -->
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <div id="modalBodyContent">
+                <!-- Динамикалык мазмун -->
+            </div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="modal" id="lightboxModal">
+        <div class="modal-content lightbox-content">
+            <span class="close-modal" id="closeLightbox">&times;</span>
+            <div class="lightbox-body">
+                <h3>Microsoft Paint Интерфейси</h3>
+                <div class="big-preview-box">
+                    <i class="fa-solid fa-desktop big-icon-pre"></i>
+                    <p>1. Терезенин аталышы (Title bar) • 2. Инструменттер лентасы (Ribbon) • 3. Түстөр палитрасы (Colors) • 4. Сүрөт тартуу аймагы (Canvas)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
